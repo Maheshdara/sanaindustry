@@ -1,0 +1,74 @@
+.buttoney{
+
+    border-radius:34px;
+  
+    border: none;
+  
+    font-size: 16px;
+  
+    /* color: rgb(255, 255, 255); */
+  
+    color: black;
+     background: linear-gradient(  grey, #0fc5fd  );
+  
+    justify-content: center;
+  
+  }
+  
+  .buttoney:hover
+  
+  {
+  
+    background:linear-gradient(rgb(230, 6, 144), rgb(9, 134, 192));
+  
+    cursor: pointer;
+  
+    color: orange;
+  
+    border: 1px solid orange;
+  
+    box-shadow: 0px 10px 10px 3px gray;
+  
+  
+  
+  
+  
+  }
+  
+  
+  
+  
+  .Align
+  
+  {
+  
+      display: flex;
+  
+      flex-direction: row;
+  
+      gap: 2rem;
+  
+      justify-content: center;
+  
+      align-items: center;
+  
+  
+  
+  
+  
+     
+  
+  }
+  
+  span{
+  
+  
+  
+  
+    font-weight: 900;
+  
+    font-size: 20px;
+  
+  }
+  
+  
