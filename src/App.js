@@ -9,7 +9,6 @@ import Clients from "./components/Clients";
 import Contact from "./components/Contact";
 import Pulveriser from "./components/Pulveriser";
 import Newpage from "./components/Newpage";
-import Signin from "./components/Signin"
 import Videoupload from "./components/Videoupload";
 
 
@@ -31,7 +30,6 @@ export default function App() {
         <Route path="/contact" element={<Contact />}/> 
         <Route path="/pulveriser" element={<Pulveriser />}/> 
         <Route path="/newpage" element={<Newpage />}/> 
-        <Route path="/signin" element={<Signin/>}/>
         <Route path="/video" element={<Videoupload/>}/>
       
       
