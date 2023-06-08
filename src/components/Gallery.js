@@ -222,17 +222,17 @@ const Gallery = () => {
                 >
                   <Container>
 
-                    <p> <span style={{ color: "cyan " }}>&#62;</span> We have launced our upgraded website live on 15th July 2009.</p>
-                    <p > <span style={{ color: "cyan " }} >&#62;</span> upgraded website live on 15th July 2009.
+                    <p> <span style={{ color: "violet " }}>&#62;</span> We have launced our upgraded website live on 15th July 2009.</p>
+                    <p > <span style={{ color: "violet " }} >&#62;</span> upgraded website live on 15th July 2009.
                       Micro Pulveriser - Advantages </p>
-                    <p> <span style={{ color: "cyan " }}>&#62;</span> We have launced our upgraded website live on 15th July 2009.</p>
-                    <p> <span style={{ color: "cyan " }}>&#62;</span> upgraded website live on 15th July 2009.
+                    <p> <span style={{ color: "violet " }}>&#62;</span> We have launced our upgraded website live on 15th July 2009.</p>
+                    <p> <span style={{ color: "violet " }}>&#62;</span> upgraded website live on 15th July 2009.
                       Micro Pulveriser - Advantages </p>
-                    <p> <span style={{ color: "cyan " }}>&#62;</span> We have launced our upgraded website live on 15th July 2009.</p>
-                    <p> <span style={{ color: "cyan " }}>&#62;</span> upgraded website live on 15th July 2009.
+                    <p> <span style={{ color: "violet " }}>&#62;</span> We have launced our upgraded website live on 15th July 2009.</p>
+                    <p> <span style={{ color: "violet " }}>&#62;</span> upgraded website live on 15th July 2009.
                       Micro Pulveriser - Advantages </p>
-                    <p> <span style={{ color: "cyan " }}>&#62;</span> We have launced our upgraded website live on 15th July 2009.</p>
-                    <p> <span style={{ color: "cyan " }}>&#62;</span> upgraded website live on 15th July 2009.
+                    <p> <span style={{ color: "violet " }}>&#62;</span> We have launced our upgraded website live on 15th July 2009.</p>
+                    <p> <span style={{ color: "violet " }}>&#62;</span> upgraded website live on 15th July 2009.
                       Micro Pulveriser - Advantages </p>
                   </Container>
                 </marquee>
