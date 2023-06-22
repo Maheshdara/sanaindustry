@@ -1,10 +1,8 @@
-
-
-import React,{useState} from 'react';
+import React,{useState} from 'react'
 
 import NavScrollExample from './NavScrollExample'
 
-import Bannerimg from"../images/banner3.jpg"
+import Banner3 from "../images/banner3.jpg"
 
 import Container from 'react-bootstrap/Container';
 
@@ -20,13 +18,13 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import { faPlus, faMinus } from '@fortawesome/free-solid-svg-icons';
 
-import img2 from "../images/img2.jpg"
+import micro from "../images/micropul.JPG"
 
-import img4 from "../images/img4.jpg"
+import cone from "../images/conepulveriser.JPG"
 
-import img9 from "../images/img9.jpg"
+import img9 from "../images/img9.jpeg"
 
-import img24 from "../images/img24.jpg"
+import img24 from "../images/img24.jpeg"
 
 import Grplant from "../images/grplant.gif"
 
@@ -38,9 +36,6 @@ import  Grplant4 from "../images/grplant4.gif"
 
 import Footer from './Footer';
 
-
-
-
 const Services = () => {
 
   const [subMenuOpen, setSubMenuOpen] = useState(-1);
@@ -49,346 +44,161 @@ const Services = () => {
 
 
 
-  return (
+    return (
 
-    <div>
+        <div>
 
-        <NavScrollExample/>
+            <NavScrollExample/>
 
-        <img src={Bannerimg}  className='d-block w-100'></img>
+            <img src={Banner3}alt='' className='d-block w-100'/>
+
+            &nbsp;
 
 
 
 
-&nbsp;
-
-        <Container fluid>
+            <Container fluid>
 
             <Row>
 
                 <Col sm={4}>
 
-                    <Card >
+                <Card >
+                            <Card.Header>Product by Category</Card.Header>
+                            <ListGroup variant="flush">
+                                <div className="submenu-list">
+                                    <ul>
+                                        <li>
+                                            <a to="#" onClick={() => toggleMenu(0)}>
+                                                Pulverisers
+                                                <FontAwesomeIcon icon={subMenuOpen === 0 ? faMinus : faPlus} />
+                                            </a>
+
+                                            <ul class={`sub-menu ${subMenuOpen === 0 ? "is-open" : ""}`}>
+                                                <a href='./pulveriser'>   <li class="menu-item">
+
+                                                    Micro Pulveriser
+                                                </li></a>
+                                                <a href='./cone'>
+                                                    <li class="menu-item">Cone Pulveriser</li>
+                                                </a>
+
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a   onClick={() => toggleMenu(1)}>
+                                                Roasters
+                                                <FontAwesomeIcon icon={subMenuOpen === 1 ? faMinus : faPlus} />
+                                            </a>
+
+                                            <ul class={`sub-menu ${subMenuOpen === 1 ? "is-open" : ""}`}>
+                                                <a href='./roaster'>
+                                                    <li class="menu-item">Roasters</li>
+                                                </a>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a to="#" onClick={() => toggleMenu(2)}>
+                                                Mixers/Blenders
+                                                <FontAwesomeIcon icon={subMenuOpen === 2 ? faMinus : faPlus} />
+                                            </a>
+
+                                            <ul class={`sub-menu ${subMenuOpen === 2 ? "is-open" : ""}`}>
+                                                <a href='./mixer'>
+                                                    <li class="menu-item">Mixer / Blender:</li>
+                                                </a>
+
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a to="#" onClick={() => toggleMenu(3)}>
+                                                Material/Conveys
+                                                <FontAwesomeIcon icon={subMenuOpen === 3 ? faMinus : faPlus} />
+                                            </a>
+
+                                            <ul class={`sub-menu ${subMenuOpen === 3 ? "is-open" : ""}`}>
+                                                <a href='./materialConveyers'>
+                                                    <li class="menu-item"> Material/Conveys</li>
+                                                </a>
+
+                                            </ul>
+                                        </li>
+
+                                        <li>
+                                            <a to="#" onClick={() => toggleMenu(5)}>
+                                                Chily Plant / Turmeric Plant
+                                                <FontAwesomeIcon icon={subMenuOpen === 5 ? faMinus : faPlus} />
+                                            </a>
+
+                                            <ul class={`sub-menu ${subMenuOpen === 5 ? "is-open" : ""}`}>
+
+                                                <a href='./chilliplant'>
+                                                    <li class="menu-item">   Chily Plant</li>
+                                                </a>
+                                                <a href='./turmericplant'>
+                                                    <li class="menu-item"> Turmeric Plant</li>
+                                                </a>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a to="#" onClick={() => toggleMenu(6)}>
+
+                                                 Grinding Pulveriser                                                <FontAwesomeIcon icon={subMenuOpen === 6 ? faMinus : faPlus} />
+                                            </a>
+
+                                            <ul class={`sub-menu ${subMenuOpen === 6 ? "is-open" : ""}`}>
+                                            <a href='./ginger'>
+
+                                                <li class="menu-item">Ginger / Garlic / Onion Paste
+/Sugar Grinding Pulveriser</li>
+</a>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a to="#" onClick={() => toggleMenu(7)}>
+                                                Dustproof Turmeric Polishing Machine
+                                                <FontAwesomeIcon icon={subMenuOpen === 7 ? faMinus : faPlus} />
+                                            </a>
+
+                                            <ul class={`sub-menu ${subMenuOpen === 7 ? "is-open" : ""}`}>
+                                                <a href='./dustproof'>
+                                                    <li class="menu-item"> Dustproof Turmeric Polishing Machine</li>
+                                                </a>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a to="#" onClick={() => toggleMenu(8)}>
+                                                Chilly Cleaning Machine
+                                                <FontAwesomeIcon icon={subMenuOpen === 8 ? faMinus : faPlus} />
+                                            </a>
+
+                                            <ul class={`sub-menu ${subMenuOpen === 8 ? "is-open" : ""}`}>
+                                            <a href='./chillycleaning'>
+
+                                                <li class="menu-item">Chilly Cleaning Machine</li>
+                                            </a>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a to="#" onClick={() => toggleMenu(9)}>
+                                            Automatic Sugar Grinding Plant :
+
+                                                <FontAwesomeIcon icon={subMenuOpen === 9 ? faMinus : faPlus} />
+                                            </a>
+
+                                            <ul class={`sub-menu ${subMenuOpen === 9 ? "is-open" : ""}`}>
+                                            <a href='./sugargrinding'>
+
+                                                <li class="menu-item">Automatic Sugar Grinding Plant   </li>
+                                            </a>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </ListGroup>
+                        </Card>
 
-                        <Card.Header style={{fontSize:"25px ",fontWeight:"900" ,color:"violet"}}>Product by Category</Card.Header>
 
-                        <ListGroup variant="flush">
-
-                            <div className="submenu-list">
-
-                                <ul>
-
-                                    <li>
-
-                                        <a to="#" onClick={() => toggleMenu(0)}>
-
-                                            Pulverisers
-
-                                            <FontAwesomeIcon icon={subMenuOpen === 0 ? faMinus : faPlus} />
-
-                                        </a>
-
-
-
-
-                                        <ul class={`sub-menu ${subMenuOpen === 0 ? "is-open" : ""}`}>
-
-                                         <a href='/pulveriser'>   <li  class="menu-item">
-
-
-
-
-                                                Micro Pulveriser
-
-                                            </li></a>
-
-                                            <li class="menu-item">Cone Pulveriser</li>
-
-                                            <li class="menu-item">Bottom Discharge Pulveriser</li>
-
-                                        </ul>
-
-                                    </li>
-
-                                    <li>
-
-                                        <a to="#" onClick={() => toggleMenu(1)}>
-
-                                            Roasters
-
-                                            <FontAwesomeIcon icon={subMenuOpen === 1 ? faMinus : faPlus} />
-
-                                        </a>
-
-
-
-
-                                        <ul class={`sub-menu ${subMenuOpen === 1 ? "is-open" : ""}`}>
-
-                                            <li class="menu-item">
-
-
-
-
-                                                Dry / Wet Grinder</li>
-
-                                            <li class="menu-item">Sub-Item 2</li>
-
-                                            <li class="menu-item">Sub-Item 3</li>
-
-                                        </ul>
-
-                                    </li>
-
-                                    <li>
-
-                                        <a to="#" onClick={() => toggleMenu(2)}>
-
-                                            Mixers/Blenders
-
-                                            <FontAwesomeIcon icon={subMenuOpen === 2 ? faMinus : faPlus} />
-
-                                        </a>
-
-
-
-
-                                        <ul class={`sub-menu ${subMenuOpen === 2 ? "is-open" : ""}`}>
-
-                                            <li class="menu-item">
-
-
-
-
-                                                Dry / Wet Grinder</li>
-
-                                            <li class="menu-item">Sub-Item 2</li>
-
-                                            <li class="menu-item">Sub-Item 3</li>
-
-                                        </ul>
-
-                                    </li>
-
-                                    <li>
-
-                                        <a to="#" onClick={() => toggleMenu(3)}>
-
-                                            Material/Conveys
-
-                                            <FontAwesomeIcon icon={subMenuOpen === 3 ? faMinus : faPlus} />
-
-                                        </a>
-
-
-
-
-                                        <ul class={`sub-menu ${subMenuOpen === 3 ? "is-open" : ""}`}>
-
-                                            <li class="menu-item">
-
-
-
-
-                                                Dry / Wet Grinder</li>
-
-                                            <li class="menu-item">Sub-Item 2</li>
-
-                                            <li class="menu-item">Sub-Item 3</li>
-
-                                        </ul>
-
-                                    </li>
-
-                                    <li>
-
-                                        <a to="#" onClick={() => toggleMenu(4)}>
-
-                                            Poultry/Cattle feeed Mixing
-
-                                            <FontAwesomeIcon icon={subMenuOpen === 4 ? faMinus : faPlus} />
-
-                                        </a>
-
-
-
-
-                                        <ul class={`sub-menu ${subMenuOpen === 4 ? "is-open" : ""}`}>
-
-                                            <li class="menu-item">
-
-
-
-
-                                                Dry / Wet Grinder</li>
-
-                                            <li class="menu-item">Sub-Item 2</li>
-
-                                            <li class="menu-item">Sub-Item 3</li>
-
-                                        </ul>
-
-                                    </li>
-
-                                    <li>
-
-                                        <a to="#" onClick={() => toggleMenu(5)}>
-
-                                            Chily Plant / Turmeric Plant
-
-                                            <FontAwesomeIcon icon={subMenuOpen === 5 ? faMinus : faPlus} />
-
-                                        </a>
-
-
-
-
-                                        <ul class={`sub-menu ${subMenuOpen === 5 ? "is-open" : ""}`}>
-
-                                            <li class="menu-item">
-
-
-
-
-                                                Dry / Wet Grinder</li>
-
-                                            <li class="menu-item">Sub-Item 2</li>
-
-                                            <li class="menu-item">Sub-Item 3</li>
-
-                                        </ul>
-
-                                    </li>
-
-                                    <li>
-
-                                        <a to="#" onClick={() => toggleMenu(6)}>
-
-                                            Chilly Plant/ Turmeric Plant
-
-                                            <FontAwesomeIcon icon={subMenuOpen === 6 ? faMinus : faPlus} />
-
-                                        </a>
-
-
-
-
-                                        <ul class={`sub-menu ${subMenuOpen === 6 ? "is-open" : ""}`}>
-
-                                            <li class="menu-item">
-
-
-
-
-                                                Dry / Wet Grinder</li>
-
-                                            <li class="menu-item">Sub-Item 2</li>
-
-                                            <li class="menu-item">Sub-Item 3</li>
-
-                                        </ul>
-
-                                    </li>
-
-                                    <li>
-
-                                        <a to="#" onClick={() => toggleMenu(7)}>
-
-                                            Dustproof Turmeric Polishing Machine
-
-                                            <FontAwesomeIcon icon={subMenuOpen === 7 ? faMinus : faPlus} />
-
-                                        </a>
-
-
-
-
-                                        <ul class={`sub-menu ${subMenuOpen === 7 ? "is-open" : ""}`}>
-
-                                            <li class="menu-item">
-
-
-
-
-                                                Dry / Wet Grinder</li>
-
-                                            <li class="menu-item">Sub-Item 2</li>
-
-                                            <li class="menu-item">Sub-Item 3</li>
-
-                                        </ul>
-
-                                    </li>
-
-                                    <li>
-
-                                        <a to="#" onClick={() => toggleMenu(8)}>
-
-                                            Vibroshifter
-
-                                            <FontAwesomeIcon icon={subMenuOpen === 8 ? faMinus : faPlus} />
-
-                                        </a>
-
-
-
-
-                                        <ul class={`sub-menu ${subMenuOpen === 8 ? "is-open" : ""}`}>
-
-                                            <li class="menu-item">
-
-
-
-
-                                                Dry / Wet Grinder</li>
-
-                                            <li class="menu-item">Sub-Item 2</li>
-
-                                            <li class="menu-item">Sub-Item 3</li>
-
-                                        </ul>
-
-                                    </li>
-
-                                    <li>
-
-                                        <a to="#" onClick={() => toggleMenu(9)}>
-
-                                            Grinders
-
-                                            <FontAwesomeIcon icon={subMenuOpen === 9 ? faMinus : faPlus} />
-
-                                        </a>
-
-
-
-
-                                        <ul class={`sub-menu ${subMenuOpen === 9 ? "is-open" : ""}`}>
-
-                                            <li class="menu-item">
-
-
-
-
-                                                Dry / Wet Grinder</li>
-
-                                            <li class="menu-item">Sub-Item 2</li>
-
-                                            <li class="menu-item">Sub-Item 3</li>
-
-                                        </ul>
-
-                                    </li>
-
-                                </ul>
-
-                            </div>
-
-                        </ListGroup>
-
-                    </Card>
-
-                 
 
                     <br/>
 
@@ -414,7 +224,7 @@ const Services = () => {
 
                                 <Container>
 
-                             
+
 
                                     <p> <span style={{color:"violet "}}>&#62;</span> We have launced our upgraded website live on 15th July 2009.</p>
 
@@ -448,15 +258,15 @@ const Services = () => {
 
                     </Card>
 
-                   
+
 
                 </Col>
 
                 <Col sm={8}>
 
                     <Card>
-
-                    <Card.Header style={{fontSize:"25px ",fontWeight:"900" ,color:"violet"}}> Our Services</Card.Header>
+                    {/* style={{fontSize:"25px ",fontWeight:"900" ,color:"violet"}} */}
+                    <Card.Header > Our Services</Card.Header>
 
                         <Card.Body>
 
@@ -467,35 +277,35 @@ const Services = () => {
 
 <div style={{display:"flex" ,flexDirection:"row"}}>
 
- 
+
 
   <div>
 
   <p>The grinding of material by pounding, as in the days of old, to the present method of
 
-   
 
-   
 
-    <br/> pulverizing under the impact of hammers by centrifugal force, has been<br/> evolved through scientific research in recent years. The outcome has been <br/>the design of a SANA Industries Micro Pulveriser, that can grind pulverize any<br/> non-abrasive material with accurate sizing, fineness and control of particle, as well as<br/> through mixing and blending of various ingredients in a single operation,<br/> thereby eliminating the use of several machines for each operation, thus<br/> contributing to a great in capital outlay and recurring expenditure.</p>
+
+
+    <br/> pulverizing under the impact of hammers by centrifugal force, has been<br/> evolved through scientific research in recent years. The outcome has been <br/>the design of a HAS Industries Micro Pulveriser, that can grind pulverize any<br/> non-abrasive material with accurate sizing, fineness and control of particle, as well as<br/> through mixing and blending of various ingredients in a single operation,<br/> thereby eliminating the use of several machines for each operation, thus<br/> contributing to a great in capital outlay and recurring expenditure.</p>
 
 
 
 
   </div>
 
-   
+
 
   <div style={{marginLeft:"55px"}}>
 
-  <img src={img2}></img>
+  <img className='prodimg' src={micro}></img>
 
 
 
 
   </div>
 
-   
+
 
 
 
@@ -504,30 +314,30 @@ const Services = () => {
 
 <br/>
 
-<p>The SANA Industries MAKE MICRO Pulveriser grinds with ease, safety and economy, offering a wide range of particle sizing of any non-abrasive material, hard or soft, dry or wet, from granular to finest dust of 300 mesh. Its dustless operation, keeps the surroundings free of dust and contamination which is very important for Dyes and Chemicals. Carefully designed, and ruggedly built, the SANA Industries MICRO Pulveriser assures long life. Every working part is made from selected material, tested to suit the specific duty. simple in operation, it can be easily opened and cleaned in few minutes, for grinding of different materials.</p>
+<p>The HAS Industries MAKE MICRO Pulveriser grinds with ease, safety and economy, offering a wide range of particle sizing of any non-abrasive material, hard or soft, dry or wet, from granular to finest dust of 300 mesh. Its dustless operation, keeps the surroundings free of dust and contamination which is very important for Dyes and Chemicals. Carefully designed, and ruggedly built, the HAS Industries MICRO Pulveriser assures long life. Every working part is made from selected material, tested to suit the specific duty. simple in operation, it can be easily opened and cleaned in few minutes, for grinding of different materials.</p>
 
 
 
 
 <p>The material to be ground, is deposited into the feeding through, and fed to the rotor by means of feed screws, to maintain a uniform flow. The revolving hammers, grind the material against the ratchet teeth liner, until reduced to the mesh desired. The centrifugal force of the revolving hammers creates an air draft, that forces the finished product through the screen, to the collecting bag clamped to the out let at the bottom. The whole process is automatic in operation, and uniform in production. The rotor is driven by a heavy duty electric motor, and the feed drive, by means of a small or fractional horsepower electric motor, as the case may be.</p>
 
-   
 
-    <p>SANA Industries MICRO Pulverisers are manufactured in various sizes. The baby size for use in laboratories and small cottage industries, and the bigger models for large industrial production. They can be made to work singly or batches. They are manufactured to suit any kind of grinding, by variation in feed screws, hammers, screens, and speed of the rotor.</p>
 
-   
+    <p>HAS Industries MICRO Pulverisers are manufactured in various sizes. The baby size for use in laboratories and small cottage industries, and the bigger models for large industrial production. They can be made to work singly or batches. They are manufactured to suit any kind of grinding, by variation in feed screws, hammers, screens, and speed of the rotor.</p>
 
-   
 
-    <p>The special design of the SANA Industries MICRO Pulveriser, and the air created the revolving hammers, not only cools the machine, but also maintains a low temperature of the material ground, with the result, certain heat sensitive materials, can also be ground advangeously. Once the Pulveriser is set to produce a particular grade of material, it would continue doing so day after day, with out the necessity of constant adjustment and re-adjustments. It does not require any skilled labour, to run the machine.</p>
 
-   
 
-    <p>SANA Industries MAKE MICRO Pulveriser provides accurate mesh control, with proper particle sizing, which effects chemical reactions, solubility, colour, volume, weight, strength, appearance etc., of the material ground, which goes to make the fine character and market value of the finished product. Whenever blending and dispersing is required, the Pulveriser does it in one single operation so thoroughly, that the ingredients become inspirable and indistinguishable hence, these Pulverisers also find a wide application in the processing of cosmetics, cold water paints, dry colors, chemical, foodstuffs etc.</p>
 
-   
+    <p>The special design of the HAS Industries MICRO Pulveriser, and the air created the revolving hammers, not only cools the machine, but also maintains a low temperature of the material ground, with the result, certain heat sensitive materials, can also be ground advangeously. Once the Pulveriser is set to produce a particular grade of material, it would continue doing so day after day, with out the necessity of constant adjustment and re-adjustments. It does not require any skilled labour, to run the machine.</p>
 
-   <div style={{display:"flex" ,flexDirection:"row"}} >  
+
+
+    <p>HAS Industries MAKE MICRO Pulveriser provides accurate mesh control, with proper particle sizing, which effects chemical reactions, solubility, colour, volume, weight, strength, appearance etc., of the material ground, which goes to make the fine character and market value of the finished product. Whenever blending and dispersing is required, the Pulveriser does it in one single operation so thoroughly, that the ingredients become inspirable and indistinguishable hence, these Pulverisers also find a wide application in the processing of cosmetics, cold water paints, dry colors, chemical, foodstuffs etc.</p>
+
+
+
+   <div style={{display:"flex" ,flexDirection:"row"}} >
 
      <div>
 
@@ -543,19 +353,19 @@ const Services = () => {
 
     </div>
 
-   
+
 
 <br/>
 
     <div style={{marginLeft:"35px"}}>
 
-        <img src={img2}></img>
+        <img className='prodimg' src={micro}></img>
 
     </div>
 
     </div>
 
-    <p>The SANA Industries MAKE MINI PULVERISER has been designed after years of reaserch, trial and test. A simple machine that grinds without stones. Other than abrasive material, that wears off the grinding steel parts, it grinds anything and everything, wet or dry and to the fineness required. It occupies very little space, largest size is 4 x 2 x 4 1/2 ft. height, easy to operate, wash and clean. Grinding is done under cool atmospheric air, thus retaining the original colour, taste and fragrance of the material ground, which no other machine can guarantee. The powder obtained is as good as hand pound powder, guaranteeing the Agmark seal.</p>
+    <p>The HAS Industries MAKE MINI PULVERISER has been designed after years of reaserch, trial and test. A simple machine that grinds without stones. Other than abrasive material, that wears off the grinding steel parts, it grinds anything and everything, wet or dry and to the fineness required. It occupies very little space, largest size is 4 x 2 x 4 1/2 ft. height, easy to operate, wash and clean. Grinding is done under cool atmospheric air, thus retaining the original colour, taste and fragrance of the material ground, which no other machine can guarantee. The powder obtained is as good as hand pound powder, guaranteeing the Agmark seal.</p>
 
     <p>It grinds all most all spices, masalas, salt, coffee, fresh fruits, vegetables, tobacco, sopari, herbs, toots, leaves, bark of trees, oil cake, dry fish, cattle and poultry feeds. soap chips, charcoal, bones, cardboard, cotton rags, leather and cork scrap, including chemicals, dyes, pigments, etc.</p>
 
@@ -574,18 +384,18 @@ const Services = () => {
 
     <p>The modern compact longer -lasting Pulveriser to relive you of all your heavy <br/> -duty grinding problems.</p>
 
-    <p>SANA Industries  make mini laboratory Pulveriser is a compact unit for grinding <br/> both wet and dry material in a laboratory, Hospital. Canteen, restaurant, Cottage <br/>Industry. This Pulveriser is fabricated form Mild steel or Stainless steel, has <br/> swinging Hammers, rotating at 3000 R.P.M grinding the material to the desired <br/> fineness, depending on the material ground, while retaining all original <br/> properties. The required mesh can be obtained by a set of screens which are <br/> provided for various materials to be ground from coarse to fine. It operates free  <br/>of dust and vibrations. It is easy to handle, silent in performance, low power  <br/>consumption, and longer, and longer lasting.</p>
+    <p>HAS Industries  make mini laboratory Pulveriser is a compact unit for grinding <br/> both wet and dry material in a laboratory, Hospital. Canteen, restaurant, Cottage <br/>Industry. This Pulveriser is fabricated form Mild steel or Stainless steel, has <br/> swinging Hammers, rotating at 3000 R.P.M grinding the material to the desired <br/> fineness, depending on the material ground, while retaining all original <br/> properties. The required mesh can be obtained by a set of screens which are <br/> provided for various materials to be ground from coarse to fine. It operates free  <br/>of dust and vibrations. It is easy to handle, silent in performance, low power  <br/>consumption, and longer, and longer lasting.</p>
 
 
 
 
     </div>
 
-   
+
 
     <div style={{marginLeft:"90px"}}>
 
-        <img src={img2}alt=""/>
+        <img className='prodimg' src={micro}alt=""/>
 
     </div>
 
@@ -603,17 +413,17 @@ const Services = () => {
 
     <div>
 
-        <p>SANA Industries make cone pulverisers for grinding for grinding all non-abrasive<br/> minerals, ochars, food stuff, dye stuff, chemical etc.</p>
+        <p>HAS Industries make cone pulverisers for grinding for grinding all non-abrasive<br/> minerals, ochars, food stuff, dye stuff, chemical etc.</p>
 
-<p>Experience gained in the manufacture of Hammer Mills, Mini and Micro Pulverises<br/> over a period of years, ahs gone into the design of the SANA Industries Impact<br/> Pulverisers. The SANA Industries Pulverisers are acknowledged, in India and<br/> Abroad, for its robust construction, Reliability and Good Design.</p>
+<p>Experience gained in the manufacture of Hammer Mills, Mini and Micro Pulverises<br/> over a period of years, ahs gone into the design of the HAS Industries Impact<br/> Pulverisers. The HAS Industries Pulverisers are acknowledged, in India and<br/> Abroad, for its robust construction, Reliability and Good Design.</p>
 
     </div>
 
-   
+
 
     <div style={{marginLeft:"85px"}}>
 
-        <img src={img4}alt=""/>
+        <img className='prodimg' src={cone}alt=""/>
 
     </div>
 
@@ -634,11 +444,11 @@ const Services = () => {
 
     </div>
 
-   
+
 
     <div style={{marginLeft:"175px"}}>
 
-        <img src={img24}alt=""/>
+        <img className='prodimg' src={img24}alt=""/>
 
     </div>
 
@@ -672,11 +482,11 @@ const Services = () => {
 
     </div>
 
-   
+
 
     <div style={{marginLeft:"112px"}}>
 
-        <img src={img9}alt=""/>
+        <img className='prodimg' src={img9}alt=""/>
 
     </div>
 
@@ -686,15 +496,15 @@ const Services = () => {
 
 <p>Hourly Production (min – max): 240 Kg – 300 Kg , Maximum load per batch: 60 Kg, Total weight of Roaster: 150 Kgs, Roast times: Brown: 10 minutes Black: 15 minutes, Type of roasting: Thermal transfer, Type of gas ( roaster): natural / propane, BTU’S (Roaster): 400,000, Gas train (roaster): Robert Shaw (700 series), Pilot (on separate line): Honeywell Ignition: 0-2.5 sec, Full heat power in: 0.4 sec, Type of gas(after burner): natural BTU’s(after burner): 120,000, Gas train(after burner): GP combustion  Ignition at: 200C , Full power at 250C, Electrical: 220V / 60 Hz, No.& force of drum motor: 2 HP, No.& force of exhaust motor: 1.5 HP, No.& force of cooling arms motor: 1 HP, No.& force of cooler motor: 2 HP, No & force of loader  motor: 1 HP, SCFM’s on smoke: 800, SCFM’s on cooling: 1750 Smoke thermometer: atmospheric, Bean / product thermometer: digital (Watlow), Afterburner thermometer: digital (Watlow), High limit afterburner thermometer: digital (Watlow), High limit roaster thermometer: atmospheric (Watlow), Controls: digital (remote) Software / CPU: Honeywell Security breakers: On all moters High temperature security: Instant shut – off panic button: Yes water quenching: no peephole: Yes Sampler: Yes Drum assembly: cast iron 8mm smoke exhaust: Type A 12: O cooling exhaust: Type B8” O Loader: mechanical protective cover for hopper: Yes, CGA approvals / standards:Yes</p>
 
-                       
 
-                       
 
-                       
 
-               <h5>AUTOMATIC POULTRY AND CATTLE FEED GRINDING PLANT</h5>        
 
-                       
+
+
+               <h5>AUTOMATIC POULTRY AND CATTLE FEED GRINDING PLANT</h5>
+
+
 
                       <div style={{display:"flex" ,flexDirection:"row"}} >
 
@@ -743,25 +553,24 @@ const Services = () => {
 
 <div style={{display:"flex" ,flexDirection:"column" ,marginLeft:"85px"}}>
 
-<img src={Grplant}></img>
+<img className='prodimg' src={Grplant}></img>
 
 <br/>
 
-<img src={Grplant1}></img>
-
-<br/>
-
-
-
-
-<img src={Grplant3}></img>
+<img className='prodimg' src={Grplant1}></img>
 
 <br/>
 
 
 
 
-<img src={Grplant4}></img>
+
+
+
+
+
+
+
 
 
 
@@ -772,33 +581,33 @@ const Services = () => {
 
 
 
-                        </div>  
+                        </div>
 
-                       
 
-                       
 
-                       
 
-                       
 
-                       
 
-                       
+
+
+
+
+
+
 
                         </Card.Body>
 
                     </Card>
 
-                   
 
 
 
 
 
-                       
 
-                 
+
+
+
 
 
 
@@ -826,11 +635,11 @@ const Services = () => {
 
         </div>
 
-  )
+    )
 
 }
 
 
 
 
-export default Services
+export default Services;

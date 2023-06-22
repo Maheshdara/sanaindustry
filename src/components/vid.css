@@ -1,74 +1,47 @@
-.buttoney{
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
 
-    border-radius:34px;
-  
-    border: none;
-  
-    font-size: 16px;
-  
-    /* color: rgb(255, 255, 255); */
-  
-    color: black;
-     background: linear-gradient(  grey, #0fc5fd  );
-  
-    justify-content: center;
-  
-  }
-  
-  .buttoney:hover
-  
-  {
-  
-    background:linear-gradient(rgb(230, 6, 144), rgb(9, 134, 192));
-  
-    cursor: pointer;
-  
-    color: orange;
-  
-    border: 1px solid orange;
-  
-    box-shadow: 0px 10px 10px 3px gray;
-  
-  
-  
-  
-  
-  }
-  
-  
-  
-  
-  .Align
-  
-  {
-  
-      display: flex;
-  
-      flex-direction: row;
-  
-      gap: 2rem;
-  
-      justify-content: center;
-  
-      align-items: center;
-  
-  
-  
-  
-  
-     
-  
-  }
-  
-  span{
-  
-  
-  
-  
-    font-weight: 900;
-  
-    font-size: 20px;
-  
-  }
-  
-  
+.form {
+  width: auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f7f7f7;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.signinbutton {
+  width: 100%;
+  padding: 10px;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+
+.videoup{
+  background-image: linear-gradient(to bottom,rgb(134, 230, 233),rgba(255, 255, 255, 0.298));
+  width: max-content;
+  margin-top: 20px;
+}

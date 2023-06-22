@@ -44,7 +44,7 @@ const Contact = () => {
 
        <br/>
 
-       
+
 
         <Container fluid>
 
@@ -52,327 +52,142 @@ const Contact = () => {
 
                 <Col sm={4}>
 
-                    <Card >
+                <Card >
+                            <Card.Header>Product by Category</Card.Header>
+                            <ListGroup variant="flush">
+                                <div className="submenu-list">
+                                    <ul>
+                                        <li>
+                                            <a to="#" onClick={() => toggleMenu(0)}>
+                                                Pulverisers
+                                                <FontAwesomeIcon icon={subMenuOpen === 0 ? faMinus : faPlus} />
+                                            </a>
+
+                                            <ul class={`sub-menu ${subMenuOpen === 0 ? "is-open" : ""}`}>
+                                                <a href='./pulveriser'>   <li class="menu-item">
+
+                                                    Micro Pulveriser
+                                                </li></a>
+                                                <a href='./cone'>
+                                                    <li class="menu-item">Cone Pulveriser</li>
+                                                </a>
+
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a   onClick={() => toggleMenu(1)}>
+                                                Roasters
+                                                <FontAwesomeIcon icon={subMenuOpen === 1 ? faMinus : faPlus} />
+                                            </a>
+
+                                            <ul class={`sub-menu ${subMenuOpen === 1 ? "is-open" : ""}`}>
+                                                <a href='./roaster'>
+                                                    <li class="menu-item">Roasters</li>
+                                                </a>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a to="#" onClick={() => toggleMenu(2)}>
+                                                Mixers/Blenders
+                                                <FontAwesomeIcon icon={subMenuOpen === 2 ? faMinus : faPlus} />
+                                            </a>
+
+                                            <ul class={`sub-menu ${subMenuOpen === 2 ? "is-open" : ""}`}>
+                                                <a href='./mixer'>
+                                                    <li class="menu-item">Mixer / Blender:</li>
+                                                </a>
+
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a to="#" onClick={() => toggleMenu(3)}>
+                                                Material/Conveys
+                                                <FontAwesomeIcon icon={subMenuOpen === 3 ? faMinus : faPlus} />
+                                            </a>
+
+                                            <ul class={`sub-menu ${subMenuOpen === 3 ? "is-open" : ""}`}>
+                                                <a href='./materialConveyers'>
+                                                    <li class="menu-item"> Material/Conveys</li>
+                                                </a>
+
+                                            </ul>
+                                        </li>
+
+                                        <li>
+                                            <a to="#" onClick={() => toggleMenu(5)}>
+                                                Chily Plant / Turmeric Plant
+                                                <FontAwesomeIcon icon={subMenuOpen === 5 ? faMinus : faPlus} />
+                                            </a>
+
+                                            <ul class={`sub-menu ${subMenuOpen === 5 ? "is-open" : ""}`}>
+
+                                                <a href='./chilliplant'>
+                                                    <li class="menu-item">   Chily Plant</li>
+                                                </a>
+                                                <a href='./turmericplant'>
+                                                    <li class="menu-item"> Turmeric Plant</li>
+                                                </a>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a to="#" onClick={() => toggleMenu(6)}>
+
+                                                 Grinding Pulveriser                                                <FontAwesomeIcon icon={subMenuOpen === 6 ? faMinus : faPlus} />
+                                            </a>
+
+                                            <ul class={`sub-menu ${subMenuOpen === 6 ? "is-open" : ""}`}>
+                                            <a href='./ginger'>
+
+                                                <li class="menu-item">Ginger / Garlic / Onion Paste
+/Sugar Grinding Pulveriser</li>
+</a>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a to="#" onClick={() => toggleMenu(7)}>
+                                                Dustproof Turmeric Polishing Machine
+                                                <FontAwesomeIcon icon={subMenuOpen === 7 ? faMinus : faPlus} />
+                                            </a>
+
+                                            <ul class={`sub-menu ${subMenuOpen === 7 ? "is-open" : ""}`}>
+                                                <a href='./dustproof'>
+                                                    <li class="menu-item"> Dustproof Turmeric Polishing Machine</li>
+                                                </a>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a to="#" onClick={() => toggleMenu(8)}>
+                                                Chilly Cleaning Machine
+                                                <FontAwesomeIcon icon={subMenuOpen === 8 ? faMinus : faPlus} />
+                                            </a>
+
+                                            <ul class={`sub-menu ${subMenuOpen === 8 ? "is-open" : ""}`}>
+                                            <a href='./chillycleaning'>
+
+                                                <li class="menu-item">Chilly Cleaning Machine</li>
+                                            </a>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a to="#" onClick={() => toggleMenu(9)}>
+                                            Automatic Sugar Grinding Plant :
+
+                                                <FontAwesomeIcon icon={subMenuOpen === 9 ? faMinus : faPlus} />
+                                            </a>
+
+                                            <ul class={`sub-menu ${subMenuOpen === 9 ? "is-open" : ""}`}>
+                                            <a href='./sugargrinding'>
+
+                                                <li class="menu-item">Automatic Sugar Grinding Plant   </li>
+                                            </a>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </ListGroup>
+                        </Card>
 
-                        <Card.Header style={{fontSize:"25px ",fontWeight:"900" ,color:"violet"}}>Product by Category</Card.Header>
 
-                        <ListGroup variant="flush">
-
-                            <div className="submenu-list">
-
-                                <ul>
-
-                                    <li>
-
-                                        <a to="#" onClick={() => toggleMenu(0)}>
-
-                                            Pulverisers
-
-                                            <FontAwesomeIcon icon={subMenuOpen === 0 ? faMinus : faPlus} />
-
-                                        </a>
-
-
-
-
-                                        <ul class={`sub-menu ${subMenuOpen === 0 ? "is-open" : ""}`}>
-
-                                         <a href='/pulveriser'>   <li  class="menu-item">
-
-
-
-
-                                                Micro Pulveriser
-
-                                            </li></a>
-
-                                            <li class="menu-item">Cone Pulveriser</li>
-
-                                            <li class="menu-item">Bottom Discharge Pulveriser</li>
-
-                                        </ul>
-
-                                    </li>
-
-                                    <li>
-
-                                        <a to="#" onClick={() => toggleMenu(1)}>
-
-                                            Roasters
-
-                                            <FontAwesomeIcon icon={subMenuOpen === 1 ? faMinus : faPlus} />
-
-                                        </a>
-
-
-
-
-                                        <ul class={`sub-menu ${subMenuOpen === 1 ? "is-open" : ""}`}>
-
-                                            <li class="menu-item">
-
-
-
-
-                                                Dry / Wet Grinder</li>
-
-                                            <li class="menu-item">Sub-Item 2</li>
-
-                                            <li class="menu-item">Sub-Item 3</li>
-
-                                        </ul>
-
-                                    </li>
-
-                                    <li>
-
-                                        <a to="#" onClick={() => toggleMenu(2)}>
-
-                                            Mixers/Blenders
-
-                                            <FontAwesomeIcon icon={subMenuOpen === 2 ? faMinus : faPlus} />
-
-                                        </a>
-
-
-
-
-                                        <ul class={`sub-menu ${subMenuOpen === 2 ? "is-open" : ""}`}>
-
-                                            <li class="menu-item">
-
-
-
-
-                                                Dry / Wet Grinder</li>
-
-                                            <li class="menu-item">Sub-Item 2</li>
-
-                                            <li class="menu-item">Sub-Item 3</li>
-
-                                        </ul>
-
-                                    </li>
-
-                                    <li>
-
-                                        <a to="#" onClick={() => toggleMenu(3)}>
-
-                                            Material/Conveys
-
-                                            <FontAwesomeIcon icon={subMenuOpen === 3 ? faMinus : faPlus} />
-
-                                        </a>
-
-
-
-
-                                        <ul class={`sub-menu ${subMenuOpen === 3 ? "is-open" : ""}`}>
-
-                                            <li class="menu-item">
-
-
-
-
-                                                Dry / Wet Grinder</li>
-
-                                            <li class="menu-item">Sub-Item 2</li>
-
-                                            <li class="menu-item">Sub-Item 3</li>
-
-                                        </ul>
-
-                                    </li>
-
-                                    <li>
-
-                                        <a to="#" onClick={() => toggleMenu(4)}>
-
-                                            Poultry/Cattle feeed Mixing
-
-                                            <FontAwesomeIcon icon={subMenuOpen === 4 ? faMinus : faPlus} />
-
-                                        </a>
-
-
-
-
-                                        <ul class={`sub-menu ${subMenuOpen === 4 ? "is-open" : ""}`}>
-
-                                            <li class="menu-item">
-
-
-
-
-                                                Dry / Wet Grinder</li>
-
-                                            <li class="menu-item">Sub-Item 2</li>
-
-                                            <li class="menu-item">Sub-Item 3</li>
-
-                                        </ul>
-
-                                    </li>
-
-                                    <li>
-
-                                        <a to="#" onClick={() => toggleMenu(5)}>
-
-                                            Chily Plant / Turmeric Plant
-
-                                            <FontAwesomeIcon icon={subMenuOpen === 5 ? faMinus : faPlus} />
-
-                                        </a>
-
-
-
-
-                                        <ul class={`sub-menu ${subMenuOpen === 5 ? "is-open" : ""}`}>
-
-                                            <li class="menu-item">
-
-
-
-
-                                                Dry / Wet Grinder</li>
-
-                                            <li class="menu-item">Sub-Item 2</li>
-
-                                            <li class="menu-item">Sub-Item 3</li>
-
-                                        </ul>
-
-                                    </li>
-
-                                    <li>
-
-                                        <a to="#" onClick={() => toggleMenu(6)}>
-
-                                            Chilly Plant/ Turmeric Plant
-
-                                            <FontAwesomeIcon icon={subMenuOpen === 6 ? faMinus : faPlus} />
-
-                                        </a>
-
-
-
-
-                                        <ul class={`sub-menu ${subMenuOpen === 6 ? "is-open" : ""}`}>
-
-                                            <li class="menu-item">
-
-
-
-
-                                                Dry / Wet Grinder</li>
-
-                                            <li class="menu-item">Sub-Item 2</li>
-
-                                            <li class="menu-item">Sub-Item 3</li>
-
-                                        </ul>
-
-                                    </li>
-
-                                    <li>
-
-                                        <a to="#" onClick={() => toggleMenu(7)}>
-
-                                            Dustproof Turmeric Polishing Machine
-
-                                            <FontAwesomeIcon icon={subMenuOpen === 7 ? faMinus : faPlus} />
-
-                                        </a>
-
-
-
-
-                                        <ul class={`sub-menu ${subMenuOpen === 7 ? "is-open" : ""}`}>
-
-                                            <li class="menu-item">
-
-
-
-
-                                                Dry / Wet Grinder</li>
-
-                                            <li class="menu-item">Sub-Item 2</li>
-
-                                            <li class="menu-item">Sub-Item 3</li>
-
-                                        </ul>
-
-                                    </li>
-
-                                    <li>
-
-                                        <a to="#" onClick={() => toggleMenu(8)}>
-
-                                            Vibroshifter
-
-                                            <FontAwesomeIcon icon={subMenuOpen === 8 ? faMinus : faPlus} />
-
-                                        </a>
-
-
-
-
-                                        <ul class={`sub-menu ${subMenuOpen === 8 ? "is-open" : ""}`}>
-
-                                            <li class="menu-item">
-
-
-
-
-                                                Dry / Wet Grinder</li>
-
-                                            <li class="menu-item">Sub-Item 2</li>
-
-                                            <li class="menu-item">Sub-Item 3</li>
-
-                                        </ul>
-
-                                    </li>
-
-                                    <li>
-
-                                        <a to="#" onClick={() => toggleMenu(9)}>
-
-                                            Grinders
-
-                                            <FontAwesomeIcon icon={subMenuOpen === 9 ? faMinus : faPlus} />
-
-                                        </a>
-
-
-
-
-                                        <ul class={`sub-menu ${subMenuOpen === 9 ? "is-open" : ""}`}>
-
-                                            <li class="menu-item">
-
-
-
-
-                                                Dry / Wet Grinder</li>
-
-                                            <li class="menu-item">Sub-Item 2</li>
-
-                                            <li class="menu-item">Sub-Item 3</li>
-
-                                        </ul>
-
-                                    </li>
-
-                                </ul>
-
-                            </div>
-
-                        </ListGroup>
-
-                    </Card>
-
-                 
 
                     <br/>
 
@@ -398,7 +213,7 @@ const Contact = () => {
 
                                 <Container>
 
-                             
+
 
                                     <p> <span style={{color:"violet "}}>&#62;</span> We have launced our upgraded website live on 15th July 2009.</p>
 
@@ -432,7 +247,7 @@ const Contact = () => {
 
                     </Card>
 
-                   
+
 
                 </Col>
 
@@ -440,23 +255,23 @@ const Contact = () => {
 
                     <Card>
 
-                    <Card.Header style={{fontSize:"25px ",fontWeight:"900" ,color:"violet"}}> Contactus</Card.Header>
+                    <Card.Header> Contactus</Card.Header>
 
                         <Card.Body>
 
-                        <div style={{display:"flex",flexDirection:"row" }}>
+                        <div style={{display:"flex",flexDirection:"row",textDecoration:"none" }}>
 
                         <a>Contact us online at :</a>
 
-                        <a href=''>sharif@sanaindustries.co.in info@sanaindustries.co.in</a>
+                        <a style={{textDecoration:"none"}}  href='mailto:mohdminhaj@hasindustries.co.in'> mohdminhaj@hasindustries.co.in</a>
 
                         </div>
 
-                       
+
 
                         <i>Contact us over phone at :<br/>
 
-                        Mr.Shaik Mohd. Sharif (9849008507, 8801972212)</i>
+                        Mr.Mohd.Minhaj ( 8074461323, 8801100124 )</i>
 
 
 
@@ -469,20 +284,20 @@ const Contact = () => {
 
                                     <i>Office cum Factory :<br/>
 
-                         SANA Industries<br/>
+                         HAS Industries<br/>
 
-                         4-41-440, Papireddy Nagar,<br/>
+                         Tata Nagar Mailardevpally, ,<br/>
 
-                         IDPL Colony Post, Hyderabad–500 037.<br/>
+                         Work Shop No : (143) , Hyderabad – 500005 .T.S. GSTIN : 36AKBPM9582E1ZX.<br/>
 
-                         Mobile: 9849008507, 8801972212, Telefax: 040 - 23084500
+                         Mobile: 8074461323, 8801100124, Landline: 040 - 66772014
 
 
 
 
 </i>
 
-                         
+
 
 
 
@@ -491,11 +306,11 @@ const Contact = () => {
 
                         <a>Website :</a>
 
-                        <a href=''>www.sanaindustries.co.in</a>
+                        <a href='' style={{textDecoration:"none"}} >www.hasindustries.co.in</a>
 
                         <a>Email :</a>
 
-                        <a href=''>sharif@sanaindustries.co.in info@sanaindustries.co.in</a>
+                        <a href='mailto:mohdminhaj@hasindustries.co.in' style={{textDecoration:"none"}} > mohdminhaj@hasindustries.co.in</a>
 
                         </div>
 
@@ -503,15 +318,15 @@ const Contact = () => {
 
                     </Card>
 
-                   
 
 
 
 
 
-                       
 
-                 
+
+
+
 
 
 
@@ -531,11 +346,11 @@ const Contact = () => {
 
         </Container>
 
-       
+
 
 <Footer/>
 
-       
+
 
         </div>
 

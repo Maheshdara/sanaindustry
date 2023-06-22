@@ -10,43 +10,40 @@ import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import Modal from 'react-bootstrap/Modal';
 import "./componet.css";
-import img1 from "../images/img1.jpg"
-import img2 from "../images/img2.jpg"
-import img3 from "../images/img3.jpg"
-import img4 from "../images/img4.jpg"
-import img5 from "../images/img5.jpg"
-import img6 from "../images/img6.jpg"
-import img7 from "../images/img7.jpg"
-import img8 from "../images/img8.jpg"
-import img9 from "../images/img9.jpg"
-import img10 from "../images/img10.jpg"
-import img11 from "../images/img11.jpg"
-import img12 from "../images/img12.jpg"
-import img13 from "../images/img13.jpg"
-import img14 from "../images/img14.jpg"
-import img15 from "../images/img15.jpg"
-import img16 from "../images/img16.jpg"
-import img17 from "../images/img17.jpg"
-import img18 from "../images/img18.jpg"
-import img19 from "../images/img19.jpg"
-import img20 from "../images/img20.jpg"
-import img21 from "../images/img21.jpg"
-// import img22 from "../images/img22.jpg"
-import img23 from "../images/img23.jpg"
-import img24 from "../images/img24.jpg"
-import img25 from "../images/img25.jpg"
-import email2 from '../images/email2.png'
-import pass1 from "../images/pass1.png"
-import profile from "../images/profile.png"
+import img1 from "../images/img1.jpeg"
+import img2 from "../images/img2.jpeg"
+import img3 from "../images/img3.jpeg"
+import img4 from "../images/img4.jpeg"
+import img5 from "../images/img5.jpeg"
+import img6 from "../images/img6.jpeg"
+import img7 from "../images/img7.jpeg"
+import img8 from "../images/img8.jpeg"
+import img9 from "../images/img9.jpeg"
+import img10 from "../images/img10.jpeg"
+import img11 from "../images/img11.jpeg"
+import img12 from "../images/img12.jpeg"
+import img13 from "../images/img13.jpeg"
+import img14 from "../images/img14.jpeg"
+import img15 from "../images/img15.jpeg"
+import img16 from "../images/img16.jpeg"
+import img17 from "../images/img17.jpeg"
+import img18 from "../images/img18.jpeg"
+import img19 from "../images/img19.jpeg"
+import img20 from "../images/img20.jpeg"
+import img21 from "../images/img21.jpeg"
+import img23 from "../images/img23.jpeg"
+import img24 from "../images/img24.jpeg"
+import img25 from "../images/img25.jpeg"
 import addbtn from "../images/addbtn.png"
-import axios from "axios";
-import Cookies from "js-cookie";
 import { useNavigate } from "react-router-dom";
+import "../App.css"
+
+import "bootstrap/dist/css/bootstrap.min.css";
 
 function MidContentent() {
     const [subMenuOpen, setSubMenuOpen] = useState(-1);
     const [show, setShow] = useState(false);
-     const [userName, setUserName] = useState("")
+    const [userName, setUserName] = useState("")
     const [password, setPassword] = useState("")
     const [token, setToken] = useState("");
     const handleClose = () => setShow(false);
@@ -59,32 +56,32 @@ function MidContentent() {
 
     const handleLogin = async (e) => {
         e.preventDefault();
-    
+
         try {
-          const response = await fetch('http://192.168.0.118:8080/api/authenticate/key', {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({ userName, password })
-          });
-      
-          if (response.ok) {
-            const data = await response.json();
-            const token = data.jwtToken; // Assuming the token is in the "token" field of the response
-            document.cookie = `token=${token}; path=/`
-            // Do something with the token (e.g., set it as a cookie, store it in state, etc.)
-            console.log('Token vinay anna thopu:', token);
-            navigate('/video')
-  
-          } else {
-            setError('Invalid credentials'); // Handle login error
-          }
+            const response = await fetch('http://localhost:9001/api/authenticate/key', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ userName, password })
+            });
+
+            if (response.ok) {
+                const data = await response.json();
+                const token = data.jwtToken; // Assuming the token is in the "token" field of the response
+                document.cookie = `token=${token}; path=/`
+                // Do something with the token (e.g., set it as a cookie, store it in state, etc.)
+                console.log('Token vinay anna thopu:', token);
+                navigate('/video')
+
+            } else {
+                setError('Invalid credentials'); // Handle login error
+            }
         } catch (error) {
-          console.error('Error:', error);
-          setError('An error occurred'); // Handle general error
+            console.error('Error:', error);
+            setError('An error occurred'); // Handle general error
         }
-      };
+    };
 
     return (
         <div>
@@ -103,26 +100,26 @@ function MidContentent() {
                                             </a>
 
                                             <ul class={`sub-menu ${subMenuOpen === 0 ? "is-open" : ""}`}>
-                                                <a href='/pulveriser'>   <li class="menu-item">
+                                                <a href='./pulveriser'>   <li class="menu-item">
 
                                                     Micro Pulveriser
                                                 </li></a>
-                                                <li class="menu-item">Cone Pulveriser</li>
-                                                <li class="menu-item">Bottom Discharge Pulveriser</li>
+                                                <a href='./cone'>
+                                                    <li class="menu-item">Cone Pulveriser</li>
+                                                </a>
+
                                             </ul>
                                         </li>
                                         <li>
-                                            <a to="#" onClick={() => toggleMenu(1)}>
+                                            <a onClick={() => toggleMenu(1)}>
                                                 Roasters
                                                 <FontAwesomeIcon icon={subMenuOpen === 1 ? faMinus : faPlus} />
                                             </a>
 
                                             <ul class={`sub-menu ${subMenuOpen === 1 ? "is-open" : ""}`}>
-                                                <li class="menu-item">
-
-                                                    Dry / Wet Grinder</li>
-                                                <li class="menu-item">Sub-Item 2</li>
-                                                <li class="menu-item">Sub-Item 3</li>
+                                                <a href='./roaster'>
+                                                    <li class="menu-item">Roasters</li>
+                                                </a>
                                             </ul>
                                         </li>
                                         <li>
@@ -132,11 +129,10 @@ function MidContentent() {
                                             </a>
 
                                             <ul class={`sub-menu ${subMenuOpen === 2 ? "is-open" : ""}`}>
-                                                <li class="menu-item">
+                                                <a href='./mixer'>
+                                                    <li class="menu-item">Mixer / Blender:</li>
+                                                </a>
 
-                                                    Dry / Wet Grinder</li>
-                                                <li class="menu-item">Sub-Item 2</li>
-                                                <li class="menu-item">Sub-Item 3</li>
                                             </ul>
                                         </li>
                                         <li>
@@ -146,27 +142,13 @@ function MidContentent() {
                                             </a>
 
                                             <ul class={`sub-menu ${subMenuOpen === 3 ? "is-open" : ""}`}>
-                                                <li class="menu-item">
+                                                <a href='./materialConveyers'>
+                                                    <li class="menu-item"> Material/Conveys</li>
+                                                </a>
 
-                                                    Dry / Wet Grinder</li>
-                                                <li class="menu-item">Sub-Item 2</li>
-                                                <li class="menu-item">Sub-Item 3</li>
                                             </ul>
                                         </li>
-                                        <li>
-                                            <a to="#" onClick={() => toggleMenu(4)}>
-                                                Poultry/Cattle feeed Mixing
-                                                <FontAwesomeIcon icon={subMenuOpen === 4 ? faMinus : faPlus} />
-                                            </a>
 
-                                            <ul class={`sub-menu ${subMenuOpen === 4 ? "is-open" : ""}`}>
-                                                <li class="menu-item">
-
-                                                    Dry / Wet Grinder</li>
-                                                <li class="menu-item">Sub-Item 2</li>
-                                                <li class="menu-item">Sub-Item 3</li>
-                                            </ul>
-                                        </li>
                                         <li>
                                             <a to="#" onClick={() => toggleMenu(5)}>
                                                 Chily Plant / Turmeric Plant
@@ -174,25 +156,27 @@ function MidContentent() {
                                             </a>
 
                                             <ul class={`sub-menu ${subMenuOpen === 5 ? "is-open" : ""}`}>
-                                                <li class="menu-item">
 
-                                                    Dry / Wet Grinder</li>
-                                                <li class="menu-item">Sub-Item 2</li>
-                                                <li class="menu-item">Sub-Item 3</li>
+                                                <a href='./chilliplant'>
+                                                    <li class="menu-item">   Chily Plant</li>
+                                                </a>
+                                                <a href='./turmericplant'>
+                                                    <li class="menu-item"> Turmeric Plant</li>
+                                                </a>
                                             </ul>
                                         </li>
                                         <li>
                                             <a to="#" onClick={() => toggleMenu(6)}>
-                                                Chilly Plant/ Turmeric Plant
-                                                <FontAwesomeIcon icon={subMenuOpen === 6 ? faMinus : faPlus} />
+
+                                                Grinding Pulveriser                                                <FontAwesomeIcon icon={subMenuOpen === 6 ? faMinus : faPlus} />
                                             </a>
 
                                             <ul class={`sub-menu ${subMenuOpen === 6 ? "is-open" : ""}`}>
-                                                <li class="menu-item">
+                                                <a href='./ginger'>
 
-                                                    Dry / Wet Grinder</li>
-                                                <li class="menu-item">Sub-Item 2</li>
-                                                <li class="menu-item">Sub-Item 3</li>
+                                                    <li class="menu-item">Ginger / Garlic / Onion Paste
+                                                        /Sugar Grinding Pulveriser</li>
+                                                </a>
                                             </ul>
                                         </li>
                                         <li>
@@ -202,39 +186,36 @@ function MidContentent() {
                                             </a>
 
                                             <ul class={`sub-menu ${subMenuOpen === 7 ? "is-open" : ""}`}>
-                                                <li class="menu-item">
-
-                                                    Dry / Wet Grinder</li>
-                                                <li class="menu-item">Sub-Item 2</li>
-                                                <li class="menu-item">Sub-Item 3</li>
+                                                <a href='./dustproof'>
+                                                    <li class="menu-item"> Dustproof Turmeric Polishing Machine</li>
+                                                </a>
                                             </ul>
                                         </li>
                                         <li>
                                             <a to="#" onClick={() => toggleMenu(8)}>
-                                                Vibroshifter
+                                                Chilly Cleaning Machine
                                                 <FontAwesomeIcon icon={subMenuOpen === 8 ? faMinus : faPlus} />
                                             </a>
 
                                             <ul class={`sub-menu ${subMenuOpen === 8 ? "is-open" : ""}`}>
-                                                <li class="menu-item">
+                                                <a href='./chillycleaning'>
 
-                                                    Dry / Wet Grinder</li>
-                                                <li class="menu-item">Sub-Item 2</li>
-                                                <li class="menu-item">Sub-Item 3</li>
+                                                    <li class="menu-item">Chilly Cleaning Machine</li>
+                                                </a>
                                             </ul>
                                         </li>
                                         <li>
                                             <a to="#" onClick={() => toggleMenu(9)}>
-                                                Grinders
+                                                Automatic Sugar Grinding Plant :
+
                                                 <FontAwesomeIcon icon={subMenuOpen === 9 ? faMinus : faPlus} />
                                             </a>
 
                                             <ul class={`sub-menu ${subMenuOpen === 9 ? "is-open" : ""}`}>
-                                                <li class="menu-item">
+                                                <a href='./sugargrinding'>
 
-                                                    Dry / Wet Grinder</li>
-                                                <li class="menu-item">Sub-Item 2</li>
-                                                <li class="menu-item">Sub-Item 3</li>
+                                                    <li class="menu-item">Automatic Sugar Grinding Plant   </li>
+                                                </a>
                                             </ul>
                                         </li>
                                     </ul>
@@ -276,46 +257,49 @@ function MidContentent() {
                     <Col sm={8}>
                         <Card>
                             <Card.Header>Home</Card.Header>
-                            <Card.Body>SANA Industries make cone pulverisers for grinding for grinding all non-abrasive minerals, ochars, food stuff, dye stuff, chemical etc. <br /><br />
+                            <Card.Body>Welcome to corporate website of HAS Industries.<br /><br />
+                                HAS Industries, Hyderabad, is the only one engineering industry Best in India for their range of food processing machinery.<br /><br />
+                                All types of Automatic Chillies, Cumin,
+                                Coriander, Turmeric, Besan Grinding Plants,
+                                Centrifugal Dressers, Chilly Cleaning Unit,
+                                Ginger Garlic Paste, Roasters for Cumin,
+                                Coarinder, Mixing of Spices Powders for Mixers,
+                                Vibro Sifters for Sieving various powders, Screw
+                                Conveyors, Dust Proof Turmeric Polishing
+                                Machines, Herbal Roots, Leafs Grinding Plants,
+                                Saw Dust, Coconut Shell Grinding Plants. Corn,
+                                Maize, Sugar, Black Salt, Grinding Plants, Bucket
+                                Elevators for lifting the materials, Poultry and
+                                Cattle Feed Grinding Units.
 
-                                Experience gained in the manufacture of Hammer Mills, Mini and Micro Pulverises over a period of years, ahs gone into the design of the SANA Industries Impact Pulverisers. The SANA Industries Pulverisers are acknowledged, in India and Abroad, for its robust construction, Reliability and Good Design.<br /><br />
-
-                                The SANA Industries Impact Pulveriser is a versatile grinding unit of heavy and rugged construction and built for continuous operation day after day. The unit is especially designed for the medium fine, and fine size reduction of minerals, ocher’s, clays, food stuff, crude drugs, pharmaceutical products, brass, zinc, dross separation, and a wide range of chemicals, pulses, agarbathi materials, dyes, pigments, tapioca, tobacco, coconut shells, saw dust, tamarind seeds, soap nut, henna leaves, turmeric, katha, charcoal etc. <br /><br />
-
-                                The SANA Impact Pulverisers meet most capacity requirements and lend themselves to a vide degree of adjustments with fineness of the finished product ranging from about 60 mesh to bulk passing through 300 mesh depending on a considerable extent to the particular material being handled. Unlike a hammer mill, it has no screens to break, wear out or clog in the crushing chamber. The SANA IMPACT PULVERISER combines grinding, classifying and conveying all in one single unit.</Card.Body>
+                            </Card.Body>
                         </Card>
                         <Container>
-                            <a href='#'><img src={img1} /></a>
-                            <a href='#'><img src={img2} /></a>
-                            <a href='#'><img src={img3} /></a>
-                            <a href='#'><img src={img4} /></a>
-                            <a href='#'><img src={img5} /></a>
-                            <a href='#'><img src={img6} /></a>
-                            <a href='#'><img src={img7} /></a>
-                            <a href='#'><img src={img8} /></a>
-                            <a href='#'><img src={img9} /></a>
-                            <a href='#'><img src={img10} /></a>
-                            <a href='#'><img src={img11} /></a>
-                            <a href='#'><img src={img12} /></a>
-                            <a href='#'><img src={img13} /></a>
-                            <a href='#'><img src={img14} /></a>
-                            <a href='#'><img src={img15} /></a>
-                            <a href='#'><img src={img16} /></a>
-                            <a href='#'><img src={img17} /></a>
-                            <a href='#'><img src={img18} /></a>
-                            <a href='#'><img src={img19} /></a>
-                            <a href='#'><img src={img20} /></a>
-                            <a href='#'><img src={img21} /></a>
-
-                            <a href='#'><img src={img23} /></a>
-                            <a href='#'><img src={img24} /></a>
-                            <a href='#'><img src={img25} /></a>
-
-                            <a href='#'><img className="pluse" src={addbtn} onClick={handleShow} /></a>
-
-
-
-
+                            <img className="midimg" style={{ height: "150px", width: "150px" }} src={img1} />
+                            <img className="midimg" src={img2} />
+                            <img className="midimg" src={img3} />
+                            <img className="midimg" src={img4} />
+                            <img className="midimg" src={img5} />
+                            <img className="midimg" src={img6} />
+                            <img className="midimg" src={img7} />
+                            <img className="midimg" src={img8} />
+                            <img className="midimg" src={img9} />
+                            <img className="midimg" src={img10} />
+                            <img className="midimg" src={img11} />
+                            <img className="midimg" src={img12} />
+                            <img className="midimg" src={img13} />
+                            <img className="midimg" src={img14} />
+                            <img className="midimg" src={img15} />
+                            <img className="midimg" src={img16} />
+                            <img className="midimg" src={img17} />
+                            <img className="midimg" src={img18} />
+                            <img className="midimg" src={img19} />
+                            <img className="midimg" src={img20} />
+                            <img className="midimg" src={img21} />
+                            <img className="midimg" src={img23} />
+                            <img className="midimg" src={img24} />
+                            <img className="midimg" src={img25} />
+                            <img className="midimg" src={addbtn} onClick={handleShow} />
 
                         </Container>
 
@@ -325,58 +309,40 @@ function MidContentent() {
 
                 </Row>
             </Container>
-            
+
             <Modal show={show} onHide={handleClose}>
+                <Modal.Header closeButton>
+                    <Modal.Title>Admin Sigin</Modal.Title>
+                </Modal.Header>
                 <Modal.Body>
-                    <Form>
-                        <div className="main">
-                            <div className="sub-main">
-                                <div>
-                                    <div className="imgs">
-                                        <div className="container-image">
-                                            <img src={profile} alt="profile" className="profile" />
 
-                                        </div>
+                    <Container className="login-container" >
 
+                        <Form className='formey' style={{ marginBottom: "20px" }}>
+                            <Form.Group controlId="formUsername">
+                                <Form.Label>Username</Form.Label>
+                                <Form.Control type="text" placeholder="Enter your username" value={userName}
+                                    onChange={(e) => { setUserName(e.target.value) }} />
+                            </Form.Group>
 
-                                    </div>
-                                    <div>
-                                        <h1>Login Page</h1>
-                                        <div>
-                                            <img src={email2} alt="email" className="email" />
-                                            <input
-                                                type="text"
-                                                placeholder="user name"
-                                                value={userName}
-                                                onChange={(e) => { setUserName(e.target.value) }}
-                                                className="name"
-                                            />
-                                        </div>
-                                        <div className="second-input">
-                                            <img src={pass1} alt="pass" className="email" />
-                                            <input type="password"
-                                                placeholder="password"
-                                                value={password}
-                                                onChange={(e) => { setPassword(e.target.value) }}
-                                                className="name" />
-                                        </div>
-                                        <div className="login-button">
-                                            <button onClick={handleLogin}>Login</button>
-                                        </div>
+                            <Form.Group controlId="formPassword">
+                                <Form.Label>Password</Form.Label>
+                                <Form.Control type="password" placeholder="Enter your password" value={password}
+                                    onChange={(e) => { setPassword(e.target.value) }} />
+                            </Form.Group>
+                            <br />
 
+                            <Button className='signinbutton' variant="primary" type="submit" onClick={handleLogin}>
+                                Sign In
+                            </Button>
+                        </Form>
+                    </Container>
 
-
-
-                                    </div>
-                                </div>
-
-
-                            </div>
-                        </div>
-                    </Form>
 
                 </Modal.Body>
+
             </Modal>
+
 
 
         </div>
