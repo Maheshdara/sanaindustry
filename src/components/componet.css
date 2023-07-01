@@ -33,7 +33,7 @@
 
   }
   .footer{
-    background-image: linear-gradient(to bottom,rgb(233, 134, 208),white);
+    background-image: linear-gradient(to bottom,rgb(37, 79, 151),white);
   }
  .navi:hover{
   font-size: 18px;
@@ -48,7 +48,7 @@
  }
 
  .navbar{
-  background-image: linear-gradient(to right,rgb(255, 255, 255),rgba(0, 225, 255, 0.373));
+  background-image: linear-gradient(to right,rgb(255, 255, 255),rgb(37, 79, 151));
  }
 
  .main {
@@ -80,7 +80,7 @@
   border-radius: 130px;
 }
 
-/* input{
+.name{
   width: 300px;
   height: 50px;
   border-radius: 60px;
@@ -88,7 +88,7 @@
   border: none;
   outline: none;
   background-color: #fff;
-} */
+}
 
 .email{
   height: 34px;
@@ -113,7 +113,12 @@
   padding-top: 20px;
 }
 
-/* button{
+
+.login-button{
+  padding-top: 25px;
+
+}
+.loginbtn{
   width: 380px;
   height: 50px;
   border-radius: 60px;
@@ -121,10 +126,7 @@
   color: white;
   font-size: 25px;
   border: none;
-} */
-/* .login-button{
-  padding-top: 25px;
-} */
+}
 
 .link{
   font-size: 25px;
@@ -135,8 +137,12 @@ a{
 }
 
 .prodimg{
-  height: 150px;
-  width: 150px;
+  height: auto;
+  max-width: 100%;
+
+}
+.machineimg{
+  max-width: 100%;
 }
 
 

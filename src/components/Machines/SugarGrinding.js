@@ -208,7 +208,7 @@ const SugarGrinding = () => {
                         <Card>
                             <Card.Header>Sugar Grinding Plant </Card.Header>
                             <Row style={{ margin: "20px" }}>
-                                <Col>
+                                <Col sm={6}>
                                     <Container>
                                         <h1>Automatic Sugar Grinding Plant :</h1>
                                         We can grind Raw Sugar 60 Mesh to 200 Mesh. The
@@ -222,9 +222,9 @@ const SugarGrinding = () => {
                                     </Container>
 
                                 </Col>
-                                <Col >
+                                <Col sm={6} >
 
-                                    <img src={sugar}></img>
+                                    <img className='machineimg' src={sugar}></img>
 
                                 </Col>
 

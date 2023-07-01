@@ -196,7 +196,7 @@ const Ginger = () => {
                             <Card.Header>Ginger / Garlic / Onion Paste
                                 /Sugar Grinding Pulveriser</Card.Header>
                             <Row style={{ margin: "20px" }}>
-                                <Col>
+                                <Col sm={6}>
                                     <Container>
                                         <h5>Ginger / Garlic / Onion Paste
                                             Sugar Grinding Pulveriser:</h5>
@@ -207,9 +207,9 @@ const Ginger = () => {
                                     </Container>
 
                                 </Col>
-                                <Col >
+                                <Col sm={6} >
 
-                                    <img src={ginger}></img>
+                                    <img  className='machineimg' src={ginger}></img>
 
                                 </Col>
 

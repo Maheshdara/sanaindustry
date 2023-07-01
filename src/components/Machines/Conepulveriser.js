@@ -213,7 +213,7 @@ const Conepulversier = () => {
                                 </Col>
                                 <Col >
 
-                                    <img src={cone}></img>
+                                    <img className='machineimg' src={cone}></img>
 
                                 </Col>
 

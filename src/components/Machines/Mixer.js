@@ -195,7 +195,7 @@ const Mixer = () => {
                         <Card>
                             <Card.Header>Mixer/Blender</Card.Header>
                             <Row style={{ margin: "20px" }}>
-                                <Col>
+                                <Col sm={6}>
                                     <Container>
                                         <h1>Mixer / Blender:</h1>
                                         Mixing the various
@@ -209,9 +209,9 @@ const Mixer = () => {
                                     </Container>
 
                                 </Col>
-                                <Col >
+                                <Col sm={6}>
 
-                                    <img src={mixer}></img>
+                                    <img className='machineimg' src={mixer}></img>
 
                                 </Col>
 

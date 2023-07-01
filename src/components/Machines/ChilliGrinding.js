@@ -209,7 +209,7 @@ const ChilliGrinding = () => {
                             <Card.Header>Chilly Cleaning Machine</Card.Header>
                             <Row style={{ margin: "20px" }}>
                                 <Col>
-                                    <Container>
+                                    <Container sm={6}>
                                         <h1>Chilly Cleaning Machine:</h1>
                                         Raw Chillies cleaning like mud, soil, stones separting
                                         machinery with suction blowers:<br /><br />
@@ -220,9 +220,9 @@ const ChilliGrinding = () => {
                                     </Container>
 
                                 </Col>
-                                <Col >
+                                <Col sm={6} >
 
-                                    <img src={chilli}></img>
+                                    <img className='machineimg' src={chilli}></img>
 
                                 </Col>
 

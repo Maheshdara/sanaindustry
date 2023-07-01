@@ -196,7 +196,7 @@ const Pulveriser = () => {
                         <Card>
                             <Card.Header>Pulverisers</Card.Header>
                             <Row style={{ margin: "20px" }}>
-                                <Col>
+                                <Col sm={6}>
                                     <Container>
                                         <h1>Micro Pulveriser:</h1>
                                         Suitable for Grinding Dry Materials like Dry Red
@@ -210,9 +210,9 @@ const Pulveriser = () => {
 
                                 </Col>
 
-                                <Col >
+                                <Col sm={6} >
 
-                                    <img src={micro}></img>
+                                    <img className='machineimg' src={micro}></img>
 
 
                                 </Col>

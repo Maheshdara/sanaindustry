@@ -195,7 +195,7 @@ const MaterialConveyers = () => {
                         <Card>
                             <Card.Header>Material Conveyars</Card.Header>
                             <Row style={{ margin: "20px" }}>
-                                <Col>
+                                <Col sm={6}>
                                     <Container>
                                         <h1>Material Lifting and Powders
                                             Conveying Machinery:</h1>
@@ -210,9 +210,9 @@ const MaterialConveyers = () => {
                                     </Container>
 
                                 </Col>
-                                <Col >
+                                <Col sm={6} >
 
-                                    <img src={conveyers}></img>
+                                    <img className='machineimg' src={conveyers}></img>
 
                                 </Col>
 

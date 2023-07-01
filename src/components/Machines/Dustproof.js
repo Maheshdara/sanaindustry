@@ -26,7 +26,7 @@ const Conepulversier = () => {
             <Container fluid>
                 <Row>
                     <Col sm={4}>
-                    <Card >
+                        <Card >
                             <Card.Header>Product by Category</Card.Header>
                             <ListGroup variant="flush">
                                 <div className="submenu-list">
@@ -49,7 +49,7 @@ const Conepulversier = () => {
                                             </ul>
                                         </li>
                                         <li>
-                                            <a   onClick={() => toggleMenu(1)}>
+                                            <a onClick={() => toggleMenu(1)}>
                                                 Roasters
                                                 <FontAwesomeIcon icon={subMenuOpen === 1 ? faMinus : faPlus} />
                                             </a>
@@ -106,15 +106,15 @@ const Conepulversier = () => {
                                         <li>
                                             <a to="#" onClick={() => toggleMenu(6)}>
 
-                                                 Grinding Pulveriser                                                <FontAwesomeIcon icon={subMenuOpen === 6 ? faMinus : faPlus} />
+                                                Grinding Pulveriser                                                <FontAwesomeIcon icon={subMenuOpen === 6 ? faMinus : faPlus} />
                                             </a>
 
                                             <ul class={`sub-menu ${subMenuOpen === 6 ? "is-open" : ""}`}>
-                                            <a href='./ginger'>
+                                                <a href='./ginger'>
 
-                                                <li class="menu-item">Ginger / Garlic / Onion Paste
-/Sugar Grinding Pulveriser</li>
-</a>
+                                                    <li class="menu-item">Ginger / Garlic / Onion Paste
+                                                        /Sugar Grinding Pulveriser</li>
+                                                </a>
                                             </ul>
                                         </li>
                                         <li>
@@ -136,24 +136,24 @@ const Conepulversier = () => {
                                             </a>
 
                                             <ul class={`sub-menu ${subMenuOpen === 8 ? "is-open" : ""}`}>
-                                            <a href='./chillycleaning'>
+                                                <a href='./chillycleaning'>
 
-                                                <li class="menu-item">Chilly Cleaning Machine</li>
-                                            </a>
+                                                    <li class="menu-item">Chilly Cleaning Machine</li>
+                                                </a>
                                             </ul>
                                         </li>
                                         <li>
                                             <a to="#" onClick={() => toggleMenu(9)}>
-                                            Automatic Sugar Grinding Plant :
+                                                Automatic Sugar Grinding Plant :
 
                                                 <FontAwesomeIcon icon={subMenuOpen === 9 ? faMinus : faPlus} />
                                             </a>
 
                                             <ul class={`sub-menu ${subMenuOpen === 9 ? "is-open" : ""}`}>
-                                            <a href='./sugargrinding'>
+                                                <a href='./sugargrinding'>
 
-                                                <li class="menu-item">Automatic Sugar Grinding Plant   </li>
-                                            </a>
+                                                    <li class="menu-item">Automatic Sugar Grinding Plant   </li>
+                                                </a>
                                             </ul>
                                         </li>
                                     </ul>
@@ -196,24 +196,24 @@ const Conepulversier = () => {
                         <Card>
                             <Card.Header>Dustproof Turmeric Polishing Machine</Card.Header>
                             <Row style={{ margin: "20px" }}>
-                                <Col>
+                                <Col sm={6}>
                                     <Container>
                                         <h1>Turmeric Dust Proof
-Polishing Machine:
-</h1>
-Surface area of Raw Turmeric polishing and
-totally covered when polishing turmeric to
-arrest dust not to flow in the air:
-<br /><br />
-Polishing time: 30 Minutes per batch <br /><br />
-Polishing time: 30 Minutes per batch
+                                            Polishing Machine:
+                                        </h1>
+                                        Surface area of Raw Turmeric polishing and
+                                        totally covered when polishing turmeric to
+                                        arrest dust not to flow in the air:
+                                        <br /><br />
+                                        Polishing time: 30 Minutes per batch <br /><br />
+                                        Polishing time: 30 Minutes per batch
 
                                     </Container>
 
                                 </Col>
-                                <Col >
+                                <Col sm={6} >
 
-                                    <img src={dust}></img>
+                                    <img className='machineimg' src={dust}></img>
 
                                 </Col>
 

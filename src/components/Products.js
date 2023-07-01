@@ -206,7 +206,7 @@ const Products = () => {
 
                     <ListGroup variant="flush">
 
-                            <Card.Header style={{fontSize:"25px ",fontWeight:"900" ,color:"violet"}}>News & Annocment</Card.Header>
+                            <Card.Header >News & Annocment</Card.Header>
 
                             <marquee
 
@@ -267,8 +267,9 @@ const Products = () => {
                     <Card>
                     {/* style={{fontSize:"25px ",fontWeight:"900" ,color:"violet"}} */}
                     <Card.Header > Our Products</Card.Header>
-
+                    <Col sm={12}>
                         <Card.Body>
+
 
 <h5>MICRO PULVERISERS</h5>
 
@@ -293,6 +294,7 @@ const Products = () => {
 
 
   </div>
+
 
 
 
@@ -597,6 +599,7 @@ const Products = () => {
 
 
                         </Card.Body>
+                        </Col>
 
                     </Card>
 

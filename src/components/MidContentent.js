@@ -6,9 +6,6 @@ import Card from 'react-bootstrap/Card';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMinus, faPlus } from '@fortawesome/free-solid-svg-icons';
 import React, { useState } from 'react';
-import Button from 'react-bootstrap/Button';
-import Form from 'react-bootstrap/Form';
-import Modal from 'react-bootstrap/Modal';
 import "./componet.css";
 import img1 from "../images/img1.jpeg"
 import img2 from "../images/img2.jpeg"
@@ -34,54 +31,14 @@ import img21 from "../images/img21.jpeg"
 import img23 from "../images/img23.jpeg"
 import img24 from "../images/img24.jpeg"
 import img25 from "../images/img25.jpeg"
-import addbtn from "../images/addbtn.png"
-import { useNavigate } from "react-router-dom";
 import "../App.css"
-
 import "bootstrap/dist/css/bootstrap.min.css";
 
 function MidContentent() {
     const [subMenuOpen, setSubMenuOpen] = useState(-1);
     const [show, setShow] = useState(false);
-    const [userName, setUserName] = useState("")
-    const [password, setPassword] = useState("")
-    const [token, setToken] = useState("");
-    const handleClose = () => setShow(false);
-    const handleShow = () => setShow(true);
     const toggleMenu = (x) => setSubMenuOpen(subMenuOpen === x ? -1 : x);
-    const [email, setEmail] = useState('');
-    const [error, setError] = useState(null);
-    const navigate = useNavigate();
 
-
-    const handleLogin = async (e) => {
-        e.preventDefault();
-
-        try {
-            const response = await fetch('http://localhost:9001/api/authenticate/key', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({ userName, password })
-            });
-
-            if (response.ok) {
-                const data = await response.json();
-                const token = data.jwtToken; // Assuming the token is in the "token" field of the response
-                document.cookie = `token=${token}; path=/`
-                // Do something with the token (e.g., set it as a cookie, store it in state, etc.)
-                console.log('Token vinay anna thopu:', token);
-                navigate('/video')
-
-            } else {
-                setError('Invalid credentials'); // Handle login error
-            }
-        } catch (error) {
-            console.error('Error:', error);
-            setError('An error occurred'); // Handle general error
-        }
-    };
 
     return (
         <div>
@@ -299,7 +256,7 @@ function MidContentent() {
                             <img className="midimg" src={img23} />
                             <img className="midimg" src={img24} />
                             <img className="midimg" src={img25} />
-                            <img className="midimg" src={addbtn} onClick={handleShow} />
+
 
                         </Container>
 
@@ -310,38 +267,7 @@ function MidContentent() {
                 </Row>
             </Container>
 
-            <Modal show={show} onHide={handleClose}>
-                <Modal.Header closeButton>
-                    <Modal.Title>Admin Sigin</Modal.Title>
-                </Modal.Header>
-                <Modal.Body>
 
-                    <Container className="login-container" >
-
-                        <Form className='formey' style={{ marginBottom: "20px" }}>
-                            <Form.Group controlId="formUsername">
-                                <Form.Label>Username</Form.Label>
-                                <Form.Control type="text" placeholder="Enter your username" value={userName}
-                                    onChange={(e) => { setUserName(e.target.value) }} />
-                            </Form.Group>
-
-                            <Form.Group controlId="formPassword">
-                                <Form.Label>Password</Form.Label>
-                                <Form.Control type="password" placeholder="Enter your password" value={password}
-                                    onChange={(e) => { setPassword(e.target.value) }} />
-                            </Form.Group>
-                            <br />
-
-                            <Button className='signinbutton' variant="primary" type="submit" onClick={handleLogin}>
-                                Sign In
-                            </Button>
-                        </Form>
-                    </Container>
-
-
-                </Modal.Body>
-
-            </Modal>
 
 
 

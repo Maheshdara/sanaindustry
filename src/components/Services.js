@@ -206,7 +206,7 @@ const Services = () => {
 
                     <ListGroup variant="flush">
 
-                            <Card.Header style={{fontSize:"25px ",fontWeight:"900" ,color:"violet"}}>News & Annocment</Card.Header>
+                            <Card.Header>News & Annocment</Card.Header>
 
                             <marquee
 

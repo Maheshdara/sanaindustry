@@ -195,7 +195,7 @@ const Roasters = () => {
                         <Card>
                             <Card.Header>Roasters</Card.Header>
                             <Row style={{ margin: "20px" }}>
-                                <Col>
+                                <Col sm={6}>
                                     <Container>
                                         <h1>Roaster cum Blender:</h1>
                                         Roasting the Cumin, Coriander with electric coils
@@ -210,9 +210,9 @@ const Roasters = () => {
                                     </Container>
 
                                 </Col>
-                                <Col >
+                                <Col sm={6} >
 
-                                    <img src={roaster}></img>
+                                    <img className='machineimg' src={roaster}></img>
 
                                 </Col>
 

@@ -196,7 +196,7 @@ const Turmeric = () => {
                         <Card>
                             <Card.Header>Turmeric Plant</Card.Header>
                             <Row style={{ margin: "20px" }}>
-                                <Col>
+                                <Col sm={6}>
                                     <Container>
                                         <h1>Automatic Turmeric / Besan /
                                             Rice / Coconut Shell Powdering
@@ -209,9 +209,9 @@ const Turmeric = () => {
                                     </Container>
 
                                 </Col>
-                                <Col >
+                                <Col sm={6} >
 
-                                    <img src={turmeric}></img>
+                                    <img className='machineimg' src={turmeric}></img>
 
                                 </Col>
 

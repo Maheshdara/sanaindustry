@@ -197,7 +197,7 @@ const Chilli = () => {
                         <Card>
                             <Card.Header>Chilly Plant</Card.Header>
                             <Row style={{ margin: "20px" }}>
-                                <Col>
+                                <Col sm={6}>
                                     <Container>
                                         <h1>Chilly Plant/Turmeric Plant:</h1>
                                         Automatic Dry Red Chillies and all spices
@@ -210,9 +210,9 @@ const Chilli = () => {
                                     </Container>
 
                                 </Col>
-                                <Col >
+                                <Col sm={6} >
 
-                                    <img src={chilli}></img>
+                                    <img className='machineimg' src={chilli}></img>
 
                                 </Col>
 

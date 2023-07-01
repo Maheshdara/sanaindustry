@@ -195,7 +195,7 @@ const Contact = () => {
 
                     <ListGroup variant="flush">
 
-                            <Card.Header style={{fontSize:"25px ",fontWeight:"900" ,color:"violet"}}>News & Annocment</Card.Header>
+                            <Card.Header>News & Annocment</Card.Header>
 
                             <marquee
 
@@ -302,17 +302,18 @@ const Contact = () => {
 
 
 
-<div style={{display:"flex",flexDirection:"row" }}>
+                        <br/>
 
                         <a>Website :</a>
 
                         <a href='' style={{textDecoration:"none"}} >www.hasindustries.co.in</a>
+                        <br/>
 
                         <a>Email :</a>
 
                         <a href='mailto:mohdminhaj@hasindustries.co.in' style={{textDecoration:"none"}} > mohdminhaj@hasindustries.co.in</a>
 
-                        </div>
+
 
                         </Card.Body>
 

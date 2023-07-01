@@ -109,7 +109,7 @@ const VideouploadFinal = () => {
           <label htmlFor="thumbNail">Videothumbnail</label>
           <input type="file" accept="image/*" id="thumbNail" onChange={handleFileChange} />
         </div>
-        <button style={{width:"250px"}} type="submit">Submit</button>
+        <button style={{width:"250px"}} class="btn btn-primary" type="submit">Submit</button>
       </form>
 
       </Containerfluid>
